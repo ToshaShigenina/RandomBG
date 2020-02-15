@@ -1,34 +1,15 @@
 'use strict';
 
 const change = document.getElementById('change'),
+  color = document.getElementById('color'),
   random = () => {
-    return Math.floor(Math.random() * 16);
-  },
-  parseFF = (val) => {
-    switch (val) {
-      case 10:
-        return 'a';
-      case 11:
-        return 'b';
-      case 12:
-        return 'c';
-      case 13:
-        return 'd';
-      case 14:
-        return 'e';
-      case 15:
-        return 'f';
-      default:
-        return val;
-    }
+    return Math.floor(Math.random() * 255);
   };
 
 change.addEventListener('click', () => {
-  const colors = [];
+  const colorsHEX = random().toString(16) + random().toString(16) + random().toString(16);
 
-  for (let i = 0; i < 6; i++) {
-    colors.push(parseFF(random()));
-  }
-
-  console.log(colors.join());
+  document.body.style.backgroundColor = `#${colorsHEX}`;
+  color.textContent = `#${colorsHEX}`;
+  change.style.color = `#${colorsHEX}`;
 });
