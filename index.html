@@ -4,14 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Background</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-color: #008d3b;
+      font-family: sans-serif;
+    }
+
+    .wrapper {
+      height: 90%;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      flex-direction: column;
+      justify-content: center;
+      -ms-align-items: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      padding: 1rem 2rem;
+      border: none;
+      font-weight: 700;
+      background-color: #fff;
+    }
+
+    .button:focus {
+      outline: none;
+    }
+
+    .button:hover {
+      cursor: pointer;
+    }
 
   </style>
 </head>
 
 <body>
   <div class="wrapper">
-    <h1 id="color"></h1>
+    <h1 id="color">#008d3b</h1>
     <button id="change" class="button">New Color</button>
   </div>
 
